@@ -1,0 +1,65 @@
+
+@import url(global.css);
+
+.perfil{ border-radius: 80% ;
+object-fit: cover;
+width: 150px;
+height: 150px;
+margin-top: 60px;
+margin-left: 50px;
+margin-bottom: 55px;
+    
+
+}
+.txt-name { font-size: 45px;
+    font-weight: 300;}
+
+.txt-name span{ 
+ position: relative;
+}
+.txt-name span::before{
+content: "";
+color: #a54444;
+animation: nome 20s infinite;
+}
+.txt-name span::after{
+content: " ";
+position: absolute;
+height: 100%;
+border-left: 2px solid #a52a2a;
+right: -20px;
+animation: cursor .8s infinite, digita 20s steps(15) infinite;
+width: calc(100% + 18px);
+background-color: #76a0c2;
+}
+@keyframes digita{
+10%, 15%, 30%, 50%, 55%, 70%, 75%, 90%, 95%{
+ width: 0;
+}
+5%,20%,25%,40%,45%,60%,65%,80%,85%,90%,95%{
+ width: calc(100% + 18px);
+}
+}
+@keyframes cursor{
+0%{
+ border-left: 2px solid #76a0c2;
+
+}
+}
+@keyframes nome{
+41%,55%{
+ content: "sejam bem vindos!";
+}
+58%,65%{
+ content: "sejam bem vindos!";
+}
+71%,80%{
+ content: "sejam bem vindos!";
+}
+
+81%,100%{
+ content: "sejam bem vindos!";
+}
+
+
+}
